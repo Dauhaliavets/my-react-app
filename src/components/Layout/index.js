@@ -1,7 +1,7 @@
 import style from "./style.module.css";
 
-const Layout = ({ id, title, descr, urlBg, colorBg }) => {
-    console.log(id, title, descr, urlBg, colorBg);
+const Layout = ({ id, title, urlBg, colorBg, children }) => {
+    // console.log('#####: children:', children);
     return (
         <section 
             className={ style.root } 
@@ -17,7 +17,7 @@ const Layout = ({ id, title, descr, urlBg, colorBg }) => {
                         <span className={ style.separator }></span>
                     </div>
                     <div className={ style.desc, style.full}>
-                        <p>{ descr }</p>
+                        { children }
                     </div>
                 </article>
             </div>
